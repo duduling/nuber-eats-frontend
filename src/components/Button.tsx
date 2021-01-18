@@ -6,7 +6,11 @@ interface IButtonProps {
   actionText: string;
 }
 
-const Button: React.FC<IButtonProps> = ({ canClick, loading, actionText }) => (
+export const Button: React.FC<IButtonProps> = ({
+  canClick,
+  loading,
+  actionText,
+}) => (
   <button
     className={`text-lg font-medium focus:outline-none text-white py-4  transition-colors ${
       canClick
@@ -17,5 +21,3 @@ const Button: React.FC<IButtonProps> = ({ canClick, loading, actionText }) => (
     {loading ? "Loading..." : actionText}
   </button>
 );
-
-export default Button;
